@@ -78,6 +78,9 @@ export type SignOption = {
   drawinf?: SignDrawInfo;
   ltv?: number;
   debug?: boolean;
+  certificate?: string | Uint8Array | ArrayBuffer | number[] | Buffer;  // PEM format or raw bytes
+  privkey?: string | Uint8Array | ArrayBuffer | number[] | Buffer | CryptoKey; // PEM format, raw bytes, or Web Crypto key
+  useP12?: boolean; // Flag to choose between P12 or direct cert/key
 };
 export type TsaServiceInfo = {
   url: string;
